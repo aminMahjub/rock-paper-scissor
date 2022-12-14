@@ -1,0 +1,162 @@
+@use './abstract/reset';
+@use './abstract/colors' as *;
+@use './abstract/mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+    @include vendorPrefix(user-select, none, ('-webkit-', '-moz-', '-o-'), false);
+    background: linear-gradient(to right, $mountbatten-pink, $blue-bell);
+    color: $white-smoke;
+}
+
+header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    color: $white-smoke;
+}
+
+main {
+    align-self: center;
+    padding: 0rem 1.5rem;
+}
+
+.game-main-body {
+    border-radius: 0.625rem;
+    background-color: $light-gray;
+    backdrop-filter: blur(10px);
+    padding: 3rem 0rem;
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & > div {
+        display: grid;
+        grid-template-rows: 1.1rem 1fr 3rem;
+        gap: 1rem;
+
+        @include forHeight(332px) {
+            grid-template-rows: 1.1rem 1fr 12vh;
+        }
+
+
+        p {
+            text-align: center;
+            color: $main-dark;
+            font-size: 1.2rem;
+            font-weight: bold;
+
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+        }
+
+        .player-point {
+            font-size: 11rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.1rem;
+
+            @include forHeight(332px) {
+                gap: 0rem;
+            }
+
+            input[type="radio"] {
+                appearance: none;
+                -webkit-appearance: none;
+                width: 3rem;
+                height: 3rem;
+                cursor: pointer;
+                border: 0rem;
+                border-radius: 0.625rem;
+
+                background: {
+                    repeat: no-repeat;
+                    size: 3rem;
+                    position: center;
+                }
+
+                &:checked {
+                    background-color: $light-gray;
+                }
+
+                @include forHeight(332px) {
+                    background-size: 60%;
+                }
+            }
+
+            #rock {
+                background-image: url('./icons/icons8-rock-48.png');
+            }
+
+            #paper {
+                background-image: url('./icons/icons8-matt-paper-48.png');
+            }
+
+            #scissor {
+                background-image: url('./icons/icons8-scissor-48.png');
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .game-main-body {
+        max-width: 400px;
+        padding: 2rem 0rem;
+
+        & > div  {
+            gap: 0.5rem;
+            margin: 0rem 1rem;
+
+            .player-point {
+                font-size: 6rem;
+            }
+
+            section {
+                gap: 0.4rem;
+
+                input[type="radio"] {
+                    width: 2rem;
+                    height: 2rem;
+                    background-size: 2rem;
+
+                    @include forWidth(343px) {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        background-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-height: 493px) {
+    .game-main-body {
+        padding: 1rem 0rem;
+
+        & > div .player-point {
+            font-size: 29vh;
+        }
+    }
+}
