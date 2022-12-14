@@ -364,6 +364,7 @@ body {
           user-select: none;
   background: linear-gradient(to right, #9E768F, #9FA4C4);
   color: #F5F5F5;
+  overflow: hidden;
 }
 
 button, input {

@@ -20,6 +20,7 @@ body {
     @include vendorPrefix(user-select, none, ('-webkit-', '-moz-', '-o-'), false);
     background: linear-gradient(to right, $mountbatten-pink, $blue-bell);
     color: $white-smoke;
+    overflow: hidden;
 }
 
 button,input {
