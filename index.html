@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
+    <script src="./js/modal.js" defer></script>
     <script src="./js/main.js" defer></script>
     <title>Rock Paper Scissor</title>
 </head>
@@ -21,10 +22,10 @@
 
     <main>
         <section class="game-main-body">
-            <div class="right-player-part">
+            <div class="first-player-part">
                 <p class="username">Ahmad</p>
 
-                <div class="player-point">1</div>
+                <div class="player-point">0</div>
 
                 <section class="game-choices">
                     <input type="radio" name="right-rock-paper-scissor" id="rock"/> 
@@ -33,7 +34,7 @@
                 </section>
             </div>
 
-            <div class="left-player-part">
+            <div class="second-player-part">
                 <p class="username">Amin</p>
 
                 <div class="player-point">0</div>
@@ -47,7 +48,7 @@
         </section>
     </main>
 
-    <section class="get-username-modal" style="display: none;">
+    <section class="get-username-modal">
         <form method="get" action="#">
             <article>
                 <input type="text" name="player-one-username" id="playerOneUsername" x-webkit-speech>
@@ -59,7 +60,7 @@
                 <label for="playerTwoUsername">Player Two's username</label>  
             </article>
             <div class="btn-wrapper">
-                <button type="button">Save</button>
+                <button type="button" class="save-username">Save</button>
             </div>
         </form>
     </section>

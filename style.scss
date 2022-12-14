@@ -55,7 +55,7 @@ main {
 
     & > div {
         display: grid;
-        grid-template-rows: 1.1rem 1fr 3rem;
+        grid-template-rows: 1.4rem 1fr 3rem;
         gap: 1rem;
 
         @include forHeight(332px) {
@@ -181,7 +181,7 @@ main {
             font-weight: 500;
             color: $main-dark;
 
-            &:focus + label {
+            &:focus + label, &:valid + label {
                 top: -0.25rem;
                 left: 1rem;
                 cursor: default;
@@ -209,6 +209,11 @@ main {
             }
         }
     }
+}
+
+.close-modal {
+    opacity: 0;
+    z-index: -2;
 }
 
 @media only screen and (max-width: 600px) {
