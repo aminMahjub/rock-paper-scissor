@@ -31,7 +31,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section, input, label {
   display: block;
 }
 
@@ -307,6 +307,10 @@ textarea {
   color: #222;
 }
 
+button {
+  border: 0px;
+}
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -338,6 +342,16 @@ textarea {
   padding: 0.2em 0;
 }
 
+input {
+  border: 0px;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 500;
@@ -352,7 +366,11 @@ body {
   color: #F5F5F5;
 }
 
-header {
+button, input {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header h1 {
   text-align: center;
   font-weight: 600;
   font-size: 1.5rem;
@@ -371,7 +389,7 @@ main {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   padding: 3rem 0rem;
-  max-width: 600px;
+  max-width: 37.5rem;
   width: 100%;
   margin: 2rem auto;
   display: flex;
@@ -445,9 +463,74 @@ main {
   background-image: url("./icons/icons8-scissor-48.png");
 }
 
+.get-username-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #41485e;
+  opacity: 1;
+  position: fixed;
+  inset: 0rem;
+  display: grid;
+}
+.get-username-modal form {
+  max-width: 45.75rem;
+  width: inherit;
+  border-radius: 0.5rem;
+  margin: auto;
+  background-color: #fff;
+  align-self: center;
+  position: relative;
+}
+.get-username-modal form article {
+  position: relative;
+}
+.get-username-modal form label {
+  font-size: 0.6rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  margin-left: 2rem;
+  position: absolute;
+  top: 0.85rem;
+  left: 1.3rem;
+  background-color: #fff;
+  cursor: text;
+  transition: all 0.1s ease-in;
+}
+.get-username-modal form input[type=text] {
+  width: 88%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  padding-left: 1.3rem;
+  border: 1px solid #177A9E;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #41485e;
+}
+.get-username-modal form input[type=text]:focus + label {
+  top: -0.25rem;
+  left: 1rem;
+  cursor: default;
+}
+.get-username-modal form button {
+  font-size: 1.1rem;
+  font-weight: 300;
+  background-color: #177A9E;
+  color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.2rem 2rem;
+}
+.get-username-modal form button:hover {
+  background-color: #fff;
+  color: #177A9E;
+  outline: 1px solid #177A9E;
+}
+
 @media only screen and (max-width: 600px) {
   .game-main-body {
-    max-width: 400px;
+    max-width: 25rem;
     padding: 2rem 0rem;
   }
   .game-main-body > div {

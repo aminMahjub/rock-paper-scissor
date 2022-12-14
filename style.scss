@@ -4,6 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap');
 
+//btn wrapper center 
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 500;
@@ -15,7 +22,11 @@ body {
     color: $white-smoke;
 }
 
-header {
+button,input {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header h1 {
     text-align: center;
     font-weight: 600;
     font-size: 1.5rem;
@@ -33,7 +44,7 @@ main {
     background-color: $light-gray;
     backdrop-filter: blur(10px);
     padding: 3rem 0rem;
-    max-width: 600px;
+    max-width: 37.5rem;
     width: 100%;
     margin: 2rem auto;
 
@@ -119,9 +130,85 @@ main {
     }
 }
 
+.get-username-modal {
+    width: 100%;
+    height: 100%;
+    background-color: $light-gray;
+    color: $main-dark;
+    opacity: 1;
+    position: fixed;
+    inset: 0rem;
+    display: grid;
+    
+    form {
+        max-width: 45.75rem;
+        width: inherit;
+        border-radius: 0.5rem;
+        margin: auto;
+        background-color: $pure-white;
+        align-self: center;
+        position: relative;
+
+        article {
+            position: relative;
+        }
+
+        label {
+            font-size: 0.6rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            margin-left: 2rem;
+
+            position: absolute;
+            top: 0.85rem;
+            left: 1.3rem;
+            background-color: $pure-white;
+            cursor: text;
+
+            transition: all 0.1s ease-in;
+        }
+
+        input[type="text"] {
+            width: 88%;
+            height: 2rem;
+            border-radius: 0.5rem;
+            margin: 2rem;
+            padding-left: 1.3rem;
+            border: 1px solid $robin-egg-blue;
+
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: $main-dark;
+
+            &:focus + label {
+                top: -0.25rem;
+                left: 1rem;
+                cursor: default;
+            }
+        }
+
+        button {
+            font-size: 1.1rem;
+            font-weight: 300;
+            background-color: $robin-egg-blue;
+            color: $pure-white;
+
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            padding: 0.2rem 2rem;
+
+            &:hover {
+                background-color: $pure-white;
+                color: $robin-egg-blue;
+                outline: 1px solid $robin-egg-blue;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .game-main-body {
-        max-width: 400px;
+        max-width: 25rem;
         padding: 2rem 0rem;
 
         & > div  {

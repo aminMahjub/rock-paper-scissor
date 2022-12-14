@@ -11,11 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
+    <script src="./js/main.js" defer></script>
     <title>Rock Paper Scissor</title>
 </head>
 <body>
     <header>
-        Rock Paper Scissor
+        <h1>Rock Paper Scissor</h1>
     </header>
 
     <main>
@@ -45,5 +46,22 @@
             </div>
         </section>
     </main>
+
+    <section class="get-username-modal">
+        <form method="get" action="#">
+            <article>
+                <input type="text" name="player-one-username" id="playerOneUsername" x-webkit-speech>
+                <label for="playerOneUsername">Player One's username</label>
+            </article>
+
+            <article>
+                <input type="text" name="player-two-username" id="playerTwoUsername" x-webkit-speech>  
+                <label for="playerTwoUsername">Player Two's username</label>  
+            </article>
+            <div class="btn-wrapper">
+                <button type="button">Save</button>
+            </div>
+        </form>
+    </section>
 </body>
 </html>
