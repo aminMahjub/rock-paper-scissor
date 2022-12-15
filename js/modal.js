@@ -1,7 +1,7 @@
 const usernames = document.querySelectorAll('.get-username-modal input[type="text"]');
 const savePlayerUsernameBtn = document.querySelector('.save-username');
 const modal = document.querySelector('.get-username-modal');
-export const gamePoint = document.querySelector('#limitPoint');
+const gamePoint = document.querySelector('#limitPoint');
 
 savePlayerUsernameBtn.addEventListener('click', () => {
     openModal();
