@@ -457,13 +457,13 @@ main {
   }
 }
 .game-main-body > div section #rock {
-  background-image: url("./icons/icons8-rock-48.png");
+  background-image: url("/icons/icons8-rock-48.png");
 }
 .game-main-body > div section #paper {
-  background-image: url("./icons/icons8-matt-paper-48.png");
+  background-image: url("/icons/icons8-matt-paper-48.png");
 }
 .game-main-body > div section #scissor {
-  background-image: url("./icons/icons8-scissor-48.png");
+  background-image: url("/icons/icons8-scissor-48.png");
 }
 
 .get-username-modal {
