@@ -446,8 +446,10 @@ main {
   background-size: 3rem;
   background-position: center;
 }
-.game-main-body > div section input[type=radio]:checked {
-  background-color: rgba(255, 255, 255, 0.3);
+@media (hover: hover) and (pointer: fine) {
+  .game-main-body > div section input[type=radio]:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 }
 @media only screen and (max-height: 332px) {
   .game-main-body > div section input[type=radio] {

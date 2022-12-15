@@ -107,8 +107,10 @@ main {
                     position: center;
                 }
 
-                &:checked {
-                    background-color: $light-gray;
+                @media (hover: hover) and (pointer: fine) {
+                    &:hover {
+                        background-color: $light-gray;
+                    }
                 }
 
                 @include forHeight(332px) {
